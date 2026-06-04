@@ -1,6 +1,6 @@
 from solutions import Solutions
 
-# Problem 1, Set 1: Hunny Hunt
+# Problem 1, Session 1, Set 1: Hunny Hunt
 # Write a function linear_search() to help Winnie the Pooh locate his lost items. 
 # The function accepts a list items and a target value as parameters. The function should 
 # return the first index of target in items, and -1 if target is not in items. Do not use any built-in functions.
@@ -19,7 +19,7 @@ print(Solutions.linear_search(items, target))
 
 print()
 
-# Problem 2, Set 1: Bouncy, Flouncy, Trouncy, Pouncy
+# Problem 2, Session 1, Set 1: Bouncy, Flouncy, Trouncy, Pouncy
 # Tigger has developed a new programming language Tiger with only four operations and one variable tigger.
 
 # bouncy or flouncy both increment the value of the variable tigger by 1.
@@ -39,7 +39,7 @@ print(Solutions.final_value_after_operations(operations))
 
 print()
 
-# Problem 3, Set 1: T-I-Double Guh-Er II
+# Problem 3, Session 1, Set 1: T-I-Double Guh-Er II
 # T-I-Double Guh-Er: That spells Tigger! Write a function tiggerfy() that accepts a string word and returns a 
 # new string that removes any substrings t, i, gg, and er from word. The function should be case insensitive.
 
@@ -59,7 +59,7 @@ print(Solutions.tiggerfy(word))
 
 print()
 
-# Problem 4, Set 1: Non-decreasing Array
+# Problem 4, Session 1, Set 1: Non-decreasing Array
 # Given an array nums with n integers, write a function non_decreasing() that checks if nums could become non-decreasing 
 # by modifying at most one element.
 
@@ -74,3 +74,34 @@ print(Solutions.non_decreasing(nums))
 # Output:
 # True
 # False
+
+print()
+
+# Problem 1, Session 2, Set 1: Transpose Matrix
+# Write a function transpose() that accepts a 2D integer array matrix and returns the transpose of matrix. 
+# The transpose of a matrix is the matrix flipped over its main diagonal, swapping the rows and columns.
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+print(Solutions.transpose(matrix))
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
+print(Solutions.transpose(matrix))
+
+# Output:
+# [
+#     [1, 4, 7],
+#     [2, 5, 8],
+#     [3, 6, 9]
+# ]
+# [
+#     [1, 4],
+#     [2, 5],
+#     [3, 6]
+# ]
