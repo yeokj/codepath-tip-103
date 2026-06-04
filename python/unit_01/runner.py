@@ -17,6 +17,8 @@ print(Solutions.linear_search(items, target))
 # 3
 # -1
 
+print()
+
 # Problem 2, Set 1:
 # Tigger has developed a new programming language Tiger with only four operations and one variable tigger.
 
@@ -34,3 +36,23 @@ print(Solutions.final_value_after_operations(operations))
 # Output:
 # 2
 # 4
+
+print()
+
+# Problem 3, Set 1:
+# T-I-Double Guh-Er: That spells Tigger! Write a function tiggerfy() that accepts a string word and returns a 
+# new string that removes any substrings t, i, gg, and er from word. The function should be case insensitive.
+
+word = "Trigger"
+print(Solutions.tiggerfy(word))
+
+word = "eggplant"
+print(Solutions.tiggerfy(word))
+
+word = "Choir"
+print(Solutions.tiggerfy(word))
+
+# Output:
+# "r"
+# "eplan"
+# "chor"
