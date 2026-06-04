@@ -37,3 +37,18 @@ class Solutions:
                 result += words[i]
                 i += 1
         return result # Space: O(N), Time: O(N)
+    
+    @staticmethod
+    def non_decreasing(nums: list[int]) -> bool:
+        violation = False
+
+        for i in range(1, len(nums)):
+            if nums[i] < nums[i - 1]:
+                if violation == True:
+                    return False
+                violation = True
+                if i == 1 or nums[i - 2] <= nums[i]:
+                    nums[i - 1] = nums[i]
+                else:
+                    nums[i] = nums[i - 1]
+        return True # Space: O(1), Time: O(N)
