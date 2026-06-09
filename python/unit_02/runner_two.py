@@ -25,3 +25,21 @@ print(SolutionTwo.total_treasures(treasure_map2))
 # Output:
 # 15
 # 50
+
+print()
+
+# Session 1, Set 1, Problem 2: Problem 2: Pirate Message Check
+# Taken captive, Captain Anne Bonny has been smuggled a secret message from her crew. She will know she can trust the message 
+# if it contains all of the letters in the alphabet. Given a string message containing only lowercase English letters and whitespace, 
+# write a function can_trust_message() that returns True if the message contains every letter of the English alphabet at least once, 
+# and False otherwise.
+
+message1 = "sphinx of black quartz judge my vow"
+message2 = "trust me"
+
+print(SolutionTwo.can_trust_message(message1))
+print(SolutionTwo.can_trust_message(message2))
+
+# Output:
+# True
+# False
