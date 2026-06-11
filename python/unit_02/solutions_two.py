@@ -5,7 +5,7 @@ class SolutionTwo:
 
         for v in treasure_map.values():
             total += v
-        return total
+        return total # Space: O(1), Time: O(N)
     
     @staticmethod
     def can_trust_message(message):
@@ -19,4 +19,16 @@ class SolutionTwo:
         for v in mp.values():
             if v == 0:
                 return False
-        return True
+        return True # Space O(1), Time: O(N)
+    
+    @staticmethod
+    def find_duplicate_chests(chests):
+        s = set()
+        result = []
+
+        for chest in chests:
+            if chest not in s:
+                s.add(chest)
+            else:
+                result.append(chest)
+        return result # Space: O(N), Time: O(N)

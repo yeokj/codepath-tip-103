@@ -43,3 +43,23 @@ print(SolutionTwo.can_trust_message(message2))
 # Output:
 # True
 # False
+
+print()
+
+# Session 1, Set 1, Problem 3: Find All Duplicate Treasure Chests in an Array
+# Captain Blackbeard has an integer array chests of length n where all the integers in chests are in the range [1, n] and each 
+# integer appears once or twice. Return an array of all the integers that appear twice, representing the treasure chests that have 
+# duplicates.
+
+chests1 = [4, 3, 2, 7, 8, 2, 3, 1]
+chests2 = [1, 1, 2]
+chests3 = [1]
+
+print(SolutionTwo.find_duplicate_chests(chests1))
+print(SolutionTwo.find_duplicate_chests(chests2))
+print(SolutionTwo.find_duplicate_chests(chests3))
+
+# Output:
+# [2, 3]
+# [1]
+# []
