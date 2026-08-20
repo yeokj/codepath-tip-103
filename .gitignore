@@ -1,1 +1,25 @@
+# --- Python ---
 __pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# --- C++ Build & Binaries ---
+*.o
+*.obj
+*.exe
+*.out
+*.app
+build/
+bin/
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# --- IDEs & OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
