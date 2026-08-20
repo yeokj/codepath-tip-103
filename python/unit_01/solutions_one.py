@@ -86,7 +86,25 @@ class SolutionsOne:
             for j in range(n):
                 if pile1[i] % (pile2[j] * k) == 0:
                     result += 1
-        return result
+        return result # Space: O(1), Time: O(M * N)
+    
+    @staticmethod
+    def local_maximums(grid: list[list[int]]) -> list[list[int]]:
+        result = []
+        n = len(grid)
+
+        for i in range(n - 2):
+            local_max = []
+            for j in range(n - 2):
+                max_val = max(
+                    grid[r][c]
+                    for r in range(i, i + 3)
+                    for c in range(j, j + 3)
+                    )
+                local_max.append(max_val)
+            result.append(local_max)
+        return result # Space O(1), Time: O(N^2)
+                
     
     @staticmethod
     def transpose(matrix): # Session 2, Set 1, Problem 1: Transpose Matrix
