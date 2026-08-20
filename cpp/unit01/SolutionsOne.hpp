@@ -28,21 +28,21 @@ public:
 
     // Session 1, Set 1, Problem 3: T-I-Double Guh-Er II
     static std::string tiggerfy(const std::string& word) {
-        // std::string result = "";
-        // int n = word.length(), i = 0;
+        std::string result = "";
+        int n = word.length(), i = 0;
 
-        // while (i < n) {
-        //     if (i < n - 1 && (tolower(word[i]) == 'g' && tolower(word[i + 1] == 'g'))) {
-        //         i += 2;
-        //         continue;
-        //     }
-        //     else if (i < n - 1 && (tolower(word[i]) == 'e' && tolower(word[i + 1] == 'r'))) {
-        //         i += 2;
-        //         continue;
-        //     }
+        while (i < n) {
+            if (i < n - 1 && (tolower(word[i]) == 'g' && tolower(word[i + 1] == 'g'))) {
+                i += 2;
+                continue;
+            }
+            else if (i < n - 1 && (tolower(word[i]) == 'e' && tolower(word[i + 1] == 'r'))) {
+                i += 2;
+                continue;
+            }
 
-        // }
-        // return "";
+        }
+        return "";
     }
 
     // Session 1, Set 1, Problem 4: Non-decreasing Array
