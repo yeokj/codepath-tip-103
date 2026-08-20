@@ -17,13 +17,13 @@ public:
 
     // Session 1, Set 1, Problem 2: Bouncy, Flouncy, Trouncy, Pouncy
     static int finalValueAfterOperations(const std::vector<std::string>& operations) {
-        // int result = 1, n = operations.size();
+        int result = 1, n = operations.size();
 
-        // for (const std::string &op : operations) {
-        //     if (op == "bouncy" || op == "flouncy") ++result;
-        //     else --result;
-        // }
-        // return result;
+        for (const std::string &op : operations) {
+            if (op == "bouncy" || op == "flouncy") ++result;
+            else --result;
+        }
+        return result;
     }
 
     // Session 1, Set 1, Problem 3: T-I-Double Guh-Er II
