@@ -104,6 +104,26 @@ print(SolutionsOne.find_missing_clues(clues, lower, upper))
 
 print()
 
+# Session 1, Set 1, Problem 6: Vegetable Harvest
+# Rabbit is collecting carrots from his garden to make a feast for Pooh and friends. Write a function harvest() that accepts a 
+# 2D n x m matrix vegetable_patch and returns the number of of carrots that are ready to harvest in the vegetable patch. A carrot 
+# is ready to harvest if vegetable_patch[i][j] has value 'c'.
+
+# Assume n = len(vegetable_patch) and m = len(vegetable_patch[0]). 0 <= i < n and 0 <= j < m.
+
+vegetable_patch = [
+	['x', 'c', 'x'],
+	['x', 'x', 'x'],
+	['x', 'c', 'c'],
+	['c', 'c', 'c']
+]
+print(SolutionsOne.harvest(vegetable_patch))
+
+# Output:
+# 6
+
+print()
+
 # Session 2, Set 1, Problem 1: Transpose Matrix
 # Write a function transpose() that accepts a 2D integer array matrix and returns the transpose of matrix. 
 # The transpose of a matrix is the matrix flipped over its main diagonal, swapping the rows and columns.

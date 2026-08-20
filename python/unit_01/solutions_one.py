@@ -54,7 +54,7 @@ class SolutionsOne:
         return True # Space: O(1), Time: O(N)
     
     @staticmethod
-    def find_missing_clues(clues, lower, upper) -> list[list[int]]: # Session 1, Set 1, Problem 5: Missing Clues
+    def find_missing_clues(clues: list[int], lower: int, upper: int) -> list[list[int]]: # Session 1, Set 1, Problem 5: Missing Clues
         result = []
         start = lower
 
@@ -69,7 +69,17 @@ class SolutionsOne:
         return result # Space: O(1), Time: O(N)
     
     @staticmethod
-    def transpose(matrix): # Problem 1, Session 2, Set 1: Transpose Matrix
+    def harvest(vegetable_patch: list[list[str]]) -> int:
+        m, n, result = len(vegetable_patch), len(vegetable_patch[0]), 0
+
+        for i in range(m):
+            for j in range(n):
+                if vegetable_patch[i][j] == 'c':
+                    result += 1
+        return result # Space: O(1), Time: O(M * N)
+    
+    @staticmethod
+    def transpose(matrix): # Session 2, Set 1, Problem 1: Transpose Matrix
         rows, cols = len(matrix), len(matrix[0])
         result = [[0 for _ in range(rows)] for _ in range(cols)]
 
