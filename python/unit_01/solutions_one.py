@@ -69,7 +69,7 @@ class SolutionsOne:
         return result # Space: O(1), Time: O(N)
     
     @staticmethod
-    def harvest(vegetable_patch: list[list[str]]) -> int:
+    def harvest(vegetable_patch: list[list[str]]) -> int: # Session 1, Set 1, Problem 6: Vegetable Harvest
         m, n, result = len(vegetable_patch), len(vegetable_patch[0]), 0
 
         for i in range(m):
@@ -77,6 +77,16 @@ class SolutionsOne:
                 if vegetable_patch[i][j] == 'c':
                     result += 1
         return result # Space: O(1), Time: O(M * N)
+    
+    @staticmethod
+    def good_pairs(pile1: list[int], pile2: list[int], k: int) -> int: # Session 1, Set 1, Problem 7: Eeyore's House
+        m, n, result = len(pile1), len(pile2), 0
+
+        for i in range(m):
+            for j in range(n):
+                if pile1[i] % (pile2[j] * k) == 0:
+                    result += 1
+        return result
     
     @staticmethod
     def transpose(matrix): # Session 2, Set 1, Problem 1: Transpose Matrix

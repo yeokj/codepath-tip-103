@@ -124,6 +124,31 @@ print(SolutionsOne.harvest(vegetable_patch))
 
 print()
 
+# Session 1, Set 1, Problem 7: Eeyore's House
+# Eeyore has collected two piles of sticks to rebuild his house and needs to choose pairs of sticks whose 
+# lengths are the right proportion. Write a function good_pairs() that accepts two integer arrays pile1 and 
+# pile2 where each integer represents the length of a stick. The function also accepts a positive integer k. 
+# The function should return the number of good pairs.
+
+# A pair (i, j) is called good if pile1[i] is divisible by pile2[j] * k. Assume 0 <= i <= len(pile1) - 1 and 
+# 0 <= j <= len(pile2) - 1.
+
+pile1 = [1, 3, 4]
+pile2 = [1, 3, 4]
+k = 1
+print(SolutionsOne.good_pairs(pile1, pile2, k))
+
+pile1 = [1, 2, 4, 12]
+pile2 = [2, 4]
+k = 3
+print(SolutionsOne.good_pairs(pile1, pile2, k))
+
+# # Output:
+# 5
+# 2
+
+print()
+
 # Session 2, Set 1, Problem 1: Transpose Matrix
 # Write a function transpose() that accepts a 2D integer array matrix and returns the transpose of matrix. 
 # The transpose of a matrix is the matrix flipped over its main diagonal, swapping the rows and columns.
