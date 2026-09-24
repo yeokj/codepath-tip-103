@@ -12,7 +12,7 @@ public:
         for (int i = 0; i < n; ++i) {
             if (items[i] == target) return i;
         }
-        return -1;
+        return -1; // Space: O(1), Time: O(N)
     }
 
     // Session 1, Set 1, Problem 2: Bouncy, Flouncy, Trouncy, Pouncy
@@ -23,7 +23,7 @@ public:
             if (op == "bouncy" || op == "flouncy") ++result;
             else --result;
         }
-        return result;
+        return result; // Space: O(1), Time: O(N)
     }
 
     // Session 1, Set 1, Problem 3: T-I-Double Guh-Er II
@@ -32,7 +32,7 @@ public:
         int n = word.length(), i = 0;
 
         while (i < n) {
-            if (i < n - 1 && (tolower(word[i]) == 'g' && tolower(word[i + 1] == 'g'))) {
+            if (i < n - 1 && (tolower(word[i]) == 'g' && tolower(word[i + 1]) == 'g')) {
                 i += 2;
                 continue;
             }
@@ -40,16 +40,33 @@ public:
                 i += 2;
                 continue;
             }
-
+            else if (tolower(word[i]) == 't' || tolower(word[i]) == 'i') {
+                ++i;
+                continue;
+            }
+            else {
+                result.push_back(tolower(word[i]));
+                ++i;
+            }
         }
-        return "";
+        return result; // Space: O(1), Time: O(N)
     }
 
     // Session 1, Set 1, Problem 4: Non-decreasing Array
     static bool nonDecreasing(std::vector<int>& nums) {
-        // Note: nums passed by non-const reference because in-place modification is used
-        // TODO: Implement logic
-        return false;
+        bool violation = false;
+        int n = nums.size();
+
+        for (int i = 1; i < n; ++i) {
+            if (nums[i] < nums[i - 1]) {
+                if (violation) return false;
+                violation = true;
+
+                if ( i == 1 || nums[i - 2] <= nums[i]) nums[ i - 1] = nums[i];
+                else nums[i] = nums[i - 1];
+            }
+        }
+        return true; // Space: O(1), Time: O(N)
     }
 
     // Session 1, Set 1, Problem 5: Missing Clues

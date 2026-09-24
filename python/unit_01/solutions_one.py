@@ -104,7 +104,6 @@ class SolutionsOne:
                 local_max.append(max_val)
             result.append(local_max)
         return result # Space O(1), Time: O(N^2)
-                
     
     @staticmethod
     def transpose(matrix): # Session 2, Set 1, Problem 1: Transpose Matrix
