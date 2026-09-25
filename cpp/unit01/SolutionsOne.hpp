@@ -85,14 +85,28 @@ public:
 
     // Session 1, Set 1, Problem 6: Vegetable Harvest
     static int harvest(const std::vector<std::vector<char>>& vegetablePatch) {
-        // TODO: Implement logic
-        return 0;
+        int m = vegetablePatch.size(), n = vegetablePatch[0].size();
+        int result = 0;
+
+        for (int i = 0; i < m; ++i) {
+            for (int j = 0; j < n; ++j) {
+                if (vegetablePatch[i][j] == 'c') ++result;
+            }
+        }
+        return result; // Space: O(1), Time: O(M * N)
     }
 
     // Session 1, Set 1, Problem 7: Eeyore's House
     static int goodPairs(const std::vector<int>& pile1, const std::vector<int>& pile2, int k) {
-        // TODO: Implement logic
-        return 0;
+        int m = pile1.size(), n = pile2.size();
+        int result = 0;
+
+        for (int i = 0; i < m; ++i) {
+            for (int j = 0; j < n; ++j) {
+                if (pile1[i] % (pile2[j] * k) == 0) ++result;
+            }
+        }
+        return result; // Space: O(1), Time: O(M * N)
     }
 
     // Session 1, Set 1, Problem 8: Local Maximums
