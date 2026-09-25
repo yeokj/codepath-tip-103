@@ -71,8 +71,16 @@ public:
 
     // Session 1, Set 1, Problem 5: Missing Clues
     static std::vector<std::vector<int>> findMissingClues(const std::vector<int>& clues, int lower, int upper) {
-        // TODO: Implement logic
-        return {};
+        std::vector<std::vector<int>> result;
+        int start = lower;
+
+        for (const int clue : clues) {
+            if (clue > start) result.push_back({start, clue - 1});
+            start = clue + 1;
+        }
+        
+        if (start <= upper) result.push_back({start, upper});
+        return result; // Space: O(1) Auxilary, Time: O(N)
     }
 
     // Session 1, Set 1, Problem 6: Vegetable Harvest
