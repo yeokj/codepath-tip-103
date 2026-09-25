@@ -11,6 +11,7 @@ venv/
 *.exe
 *.out
 *.app
+*.dSYM/
 build/
 bin/
 CMakeLists.txt.user
@@ -23,3 +24,8 @@ cmake_install.cmake
 .idea/
 .DS_Store
 Thumbs.db
+
+# Compiled binaries for all units
+runner
+runner_*
+runner_unit_*
