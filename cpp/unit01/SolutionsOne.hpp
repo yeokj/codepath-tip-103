@@ -111,7 +111,22 @@ public:
 
     // Session 1, Set 1, Problem 8: Local Maximums
     static std::vector<std::vector<int>> localMaximums(const std::vector<std::vector<int>>& grid) {
-        // TODO: Implement logic
-        return {};
+        std::vector<std::vector<int>> result;
+        int n = grid.size();
+
+        for (int i = 0; i < n - 2; ++i) {
+            std::vector<int> localMax;
+            for (int j = 0; j < n - 2; ++j) {
+                int maxVal = grid[i][j];
+                for (int r = i; r < i + 3; ++r) {
+                    for (int c = j; c < j + 3; ++c) {
+                        maxVal = std::max(maxVal, grid[r][c]);
+                    }
+                }
+                localMax.push_back(maxVal);
+            }
+            result.push_back(localMax);
+        }
+        return result; // Space: O(1) Auxilary, Time: O(N^2)
     }
 };
